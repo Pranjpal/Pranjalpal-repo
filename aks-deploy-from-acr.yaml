@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-springboot-app
-        image: image: kbcontregpranjpal.azurecr.io/Pranjpal/Pranjpal-repo:#{Build.BuildId}#
+        image: kbcontregpranjpal.azurecr.io/Pranjpal/Pranjpal-repo:#{Build.BuildId}#
         imagePullPolicy: Always
         ports:
         - containerPort: 8085
