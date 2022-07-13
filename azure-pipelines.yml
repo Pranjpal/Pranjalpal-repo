@@ -8,12 +8,12 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '6e76465f-df1a-4c7b-b8c8-b2279d68fca1'
-  imageRepository: 'akannanspringbootapp'
-  containerRegistry: 'myacrrepo431.azurecr.io'
+  dockerRegistryServiceConnection: '4012950c-882c-4c5c-9d67-f237fb10a965'
+  imageRepository: 'pranjal13579pranjalpal'
+  containerRegistry: 'kbcontainer123.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
-  imagePullSecret: 'myacrrepo431b1b0-auth'
+  imagePullSecret: 'kbcontainer123-auth'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -63,7 +63,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'akannan1087springbootapp.default'
+    environment: 'pranjal13579pranjalpal-repo.default'
     strategy:
       runOnce:
         deploy:
@@ -93,7 +93,7 @@ stages:
     pool:
       vmImage: $(vmImageName)
 
-    environment: 'akannan1087springbootapp.$(k8sNamespaceForPR)'
+    environment: 'pranjal13579pranjalpal-repo.$(k8sNamespaceForPR)'
     strategy:
       runOnce:
         deploy:
